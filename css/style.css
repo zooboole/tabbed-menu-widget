@@ -1,0 +1,178 @@
+html, body{
+	box-sizing: border-box;
+	font-size: 14px;
+	font-family: Verdana;
+
+	background-color: teal;
+
+	margin: 0;
+	padding: 0;
+}
+
+.tab-wrapper{
+	position: relative;
+	width: 700px;
+	margin: 5% auto;
+
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.tab-content{
+	position: absolute;
+	left: 0;
+	margin-left: -1px;
+
+	text-align: left;
+	padding: 20px;
+	background: white;
+	opacity: 0;
+	display: none;
+
+	transition: all .5s linear;
+}
+
+
+.tab{
+	text-align: center;
+}
+
+.tab label{
+	padding: 14px;
+	display: block;
+	background: #2a2e3e;
+	color: grey;
+	display: block;
+	margin-left: -1px;
+	text-transform: uppercase;
+	transition: all .5s linear;
+}
+
+.tab input[type='radio']{
+	display: none;
+}
+
+.tab label:hover {
+  cursor: pointer; /* make it look like a link */
+  background: white;
+}
+
+
+.tab input[type='radio']:checked ~ .tab-content{
+	opacity: 1;
+	display: block;
+}
+
+.tab input[type='radio']:checked ~label{
+	background: white;
+	color:black;
+}
+
+
+
+
+/***********EXTRA************/
+
+
+img{
+	max-width: 100%;
+}
+
+.img-right{
+	float:right;
+}
+
+.box{
+	padding: 2em;
+	border-bottom:1px solid #ddd;
+	margin:1em;
+	text-align: center;
+}
+
+.box::before, .box::after{
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.copyright{
+	position:fixed; 
+	bottom:0; 
+	right:0; 
+	left:0; 
+	background-color:white;
+	text-align:center; 
+	font-size:14px; 
+	padding:0.5em 0
+}
+
+
+// BUTTONS
+
+button {
+    font-size: 100%; /* Corrects font size not being inherited in all browsers */
+    margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+    vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+}
+
+.button, button, input[type="submit"], input[type="button"], input[type="reset"] {
+    display: inline-block;
+    position: relative;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border: 0 none;
+    margin-top: 0 5px;
+	font-size: 14px;
+	transition: all .3s linear;
+	text-transform: capitalize;
+	border: 3px solid transparent;
+}
+
+.button, button, input[type="submit"], input[type="button"], input[type="reset"]{
+	background: white;
+	color: teal;
+}
+
+.button:hover{
+	background: #2a3e4e;
+	border: 3px solid white;
+	color: white;
+}
+
+
+
+/***********MEDIA QUERY************/
+
+@media all and (max-width: 768px){
+
+	body{
+		font-size: 100%;
+	}
+
+	.tab-wrapper{
+		width: 90%;
+		display: block;
+	}
+
+	.tab-content{
+		max-height: 0;
+		position: relative;
+	}
+
+	.tab input[type='radio']:checked ~ .tab-content{
+		max-height: 100%;
+	}
+
+	.tab input[type='radio']:checked ~label{
+		border-bottom: 1px solid teal;
+	}
+
+	/* Copy right */
+
+	.copyright{ 
+		font-size:11px; 
+	}
+
+}
