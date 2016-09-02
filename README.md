@@ -3,6 +3,8 @@
 This is a tutorial on how to create a simple tabbed menu using radio input. This type of widget is widely used on website to economize space. Very useful on news websites.
 
 
+<a href="https://phpocean.com/demo/tab-menu/" target="_blank">![Image of screenshot](https://phpocean.com/assets/images/source-images/pics-articles/tabdesktopimage.png)
+</a>
 
 ## Install & Usage
 
